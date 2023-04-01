@@ -92,11 +92,12 @@ var finances = [
 //var months = finances.length
 //console.log(`Total Months: ${totalMonths};`);
 
-
+/*MONTHS */
 for (var i=0; i<finances.length;i++){
   console.log("Total Months: " + finances.length);
 }
 
+/*NET TOTAL*/
 const array = finances;
 let netTotal = 0;
 
@@ -105,3 +106,61 @@ for (let i = 0; i < finances.length; i++) {
 }
 
 console.log("Total $" + netTotal);
+
+/*NET LOSS*/
+const profitLosses = [
+ -69417,  -216386, -1163797,-174946,-1100387,-524626,-687986,-1196225,-1022534,-755566,
+ -80353, -335203, 
+  
+];
+
+const changes = profitLosses.map((element, index) =>
+  index === 0 ? 0 : element - profitLosses[index - 1]
+);
+
+const total = profitLosses.reduce( (sum , item) => sum += item, 0)/ profitLosses.length;
+const averageChange = total / (profitLosses.length - 1);
+
+console.log(averageChange); //Average Change: -2315.12, mine: -55510.80303030303
+console.log(Math.floor(averageChange));
+
+
+/*FIND THE AVAREGAE CHANGE !! */
+
+ /*increase in profits (date and amount) */
+ const earningsArray = finances.map((el) => el[1]);
+
+const profitMonths = finances.filter((el) => el[1] > 0);
+const salesOnProfitMonths = profitMonths
+  .map((el) => el[1])
+  .reduce((accVal, curVal) => accVal + curVal, 0);
+
+const avgOfProfitAndLoss =
+  earningsArray.reduce((accVal, curVal) => accVal + curVal, 0) / finances.length; 
+
+const maxMonth = {
+  monthName: '',
+  profit: 0,
+};
+
+const minMonth = {
+  monthName: '',
+  profit: 0,
+};
+
+finances.forEach((month) => {
+  if (month[1] > maxMonth.profit) {
+    maxMonth.monthName = month[0];
+    maxMonth.profit = month[1];
+  }
+
+  if (month[1] < minMonth.profit) {
+    minMonth.monthName = month[0];
+    minMonth.profit = month[1];
+  }
+
+  return { maxMonth, minMonth };
+});
+
+console.log('The month with max profit is : ', maxMonth);
+console.log('The month with min profit is : ', minMonth);
