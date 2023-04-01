@@ -127,6 +127,8 @@ console.log(Math.floor(averageChange));
 
 /*FIND THE AVAREGAE CHANGE !! */
 
+
+
  /*increase in profits (date and amount) */
  const earningsArray = finances.map((el) => el[1]);
 
@@ -162,5 +164,5 @@ finances.forEach((month) => {
   return { maxMonth, minMonth };
 });
 
-console.log('The month with max profit is : ', maxMonth);
-console.log('The month with min profit is : ', minMonth);
+console.log('Greatest Increase in Profits/Losses: ', maxMonth);
+console.log('Greatest Decrease in Profits/Losses:', minMonth);
