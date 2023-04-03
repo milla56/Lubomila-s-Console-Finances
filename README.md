@@ -7,7 +7,7 @@ Module 4 Challenge - JavaScript Fundamentals: Console Finances
 
 ## Installation
 
-Follow the link for the final version of the website [Console-Finances](https://milla56.github.io/Bootstrap-Portfolio/) 
+Follow the link for the final version of the website [Console-Finances](https://milla56.github.io/Lubomila-s-Console-Finances/) 
 
 ## Usage
 The list shows what steps were made to complete the challenge:
