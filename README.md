@@ -13,10 +13,11 @@ N/A
 The list shows what steps were made to complete the challenge:
 - To calculate the total amount of months, I used iteration.  Here, the "for" statement declares the variable i and initializes it to 0. It checks that i is less than the number of the array, performs the succeeding if statement, and increments i by 1 after each pass through the loop.
 - To calculate the net total amount of Profit over the entire period, I used constants and iteration.
-- To get to the total net amount of Losses over the entire period, I used constants to create an array with all of the losses numbers and constants to reach the final amount.
+- To get to the total net amount of Losses over the entire period, I used constants to create an array with all of the losses numbers and constants to reach the final amount. To round down the final number I used "Math.floor".
 - In order to reach the final amount of Greatest Increase and Decrease, I used constants, if statement and map. 
 
-ADD SCREENSHOT HERE
+
+![FINAL RESULT](./screenshot/image%20(2).png)
 
 ## Credits
 
