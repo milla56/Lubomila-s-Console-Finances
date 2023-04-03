@@ -120,15 +120,7 @@ const changes = profitLosses.map((element, index) =>
 const total = profitLosses.reduce( (sum , item) => sum += item, 0)/ profitLosses.length;
 const averageChange = total / (profitLosses.length - 1);
 
-console.log("Average Change: " + (Math.floor(averageChange))); //Average Change: -2315.12, mine: -55510.80303030303
-
-
-/*let averageChange = netTotal / (finances.length - 1);
-console.log(averageChange);*/
-
-
-/*FIND THE AVAREGAE CHANGE !! */
-
+console.log("Average Change: " + (Math.floor(averageChange))); //Average Change
 
 
  /*increase in profits (date and amount) */
